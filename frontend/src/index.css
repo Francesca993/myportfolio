@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant+SC:wght@300;400;500;600;700&family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-beige-100 {
+    background-color: #ffffede7; /* Beige chiaro */
+  }
+  .bg-beige-300 {
+    background-color: #e1d7a7; /* Beige medio */
+  }
+  .bg-beige-400 {
+    background-color: #d1c8a2; /* Beige scuro */
+  }
+  .bg-lilac-50 {
+    background-color: #f5f0ff; /* Lilla chiaro */
+  }
+  .bg-lilac-tr {
+    background-color: #fcfcfc5e; /* Lilla chiaro */
+  }
+}
+
+.home {
+  background-image: url("./assets/homeislanda.jpg"); /* Usa il percorso dall'interno della cartella 'public' */
+  background-size: cover; /* L'immagine coprirà l'intera area */
+  background-position: center; /* Posiziona al centro */
+  height: 100vh; /* L'altezza è 100% della viewport */
+  width: 100%;
+}
+
+@keyframes typing {
+  from {
+    width: 50; /* Partenza a 0 per simulare la digitazione */
+  }
+  to {
+    width: 24%; /* Scrivi fino al 100% della larghezza del testo */
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent; /* Effetto blinking del cursore */
+  }
+}
+
+.typing-text {
+  overflow: hidden;
+  border-right: 0.15em solid rgb(31, 41, 55); /* Colore del cursore */
+  white-space: nowrap;
+  width: 0;
+  animation: typing 2.5s steps(40, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
