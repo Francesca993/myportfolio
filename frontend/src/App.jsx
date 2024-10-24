@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 import CreatePostPage from "./pages/CreatePostPage";
 import BlogPage from "./pages/BlogPage";
 import PostDetailPage from "./pages/PostDetailPage";
+import About from "./pages/About";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -50,6 +51,7 @@ function App() {
         />
         <Route path="/posts" element={<BlogPage />} />
         <Route path="/posts/:id" element={<PostDetailPage />} />
+        <Route path="/about" element={<About />} />
       </Routes>
 
       <Footer />

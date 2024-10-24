@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function CreatePostPage() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [image, setImage] = useState(null);
+  const [images, setImages] = useState([]); // Array per più immagini
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const navigate = useNavigate();
@@ -13,13 +13,15 @@ export default function CreatePostPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Crea un form data per il caricamento dell'immagine
+    // Crea un form data per il caricamento delle immagini
     const formData = new FormData();
     formData.append("title", title);
     formData.append("content", content);
-    if (image) {
-      formData.append("images", image);
-    }
+
+    // Aggiungi tutte le immagini al FormData
+    images.forEach((image) => {
+      formData.append("images", image); // Le chiavi devono corrispondere a ciò che il backend si aspetta
+    });
 
     try {
       const token = localStorage.getItem("token");
@@ -35,7 +37,7 @@ export default function CreatePostPage() {
         {
           headers: {
             Authorization: `Bearer ${token}`,
-            "Content-Type": "multipart/form-data", // Importante per il caricamento dell'immagine
+            "Content-Type": "multipart/form-data", // Importante per il caricamento delle immagini
           },
         }
       );
@@ -43,16 +45,22 @@ export default function CreatePostPage() {
       // Reset del form e mostra il messaggio di successo
       setTitle("");
       setContent("");
-      setImage(null);
+      setImages([]); // Reset dell'array di immagini
       setError("");
       setSuccessMessage("Post creato con successo!");
 
-      // Puoi scegliere di reindirizzare alla pagina dei post o fare altro
+      // Reindirizza alla pagina dei post o fai altro
       navigate("/posts");
     } catch (error) {
       console.error("Errore nella creazione del post:", error);
       setError("Errore nella creazione del post. Riprova.");
     }
+  };
+
+  // Funzione per gestire il caricamento di più immagini
+  const handleImageChange = (e) => {
+    const selectedImages = Array.from(e.target.files); // Trasforma FileList in un array
+    setImages(selectedImages);
   };
 
   return (
@@ -85,10 +93,11 @@ export default function CreatePostPage() {
         </div>
 
         <div>
-          <label className="block text-sm">Immagine (opzionale)</label>
+          <label className="block text-sm">Immagini (opzionali)</label>
           <input
             type="file"
-            onChange={(e) => setImage(e.target.files[0])}
+            multiple // Permette il caricamento di più immagini
+            onChange={handleImageChange}
             className="w-full p-2 border rounded"
           />
         </div>
