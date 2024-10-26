@@ -64,7 +64,7 @@ export default function CreatePostPage() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10">
+    <div className="max-w-md mx-auto mt-10 pt-14">
       <h1 className="text-2xl font-bold mb-6">Crea un Nuovo Post</h1>
 
       {error && <p className="text-red-500">{error}</p>}

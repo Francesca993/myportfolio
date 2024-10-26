@@ -41,7 +41,7 @@ export default function BlogPage() {
   };
 
   return (
-    <div className="font-cormorant-sc min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+    <div className="font-cormorant-sc min-h-screen max-w-7xl mx-auto pt-14 px-4 sm:px-6 lg:px-8 mt-10">
       <h1 className="text-3xl font-bold mb-6 text-center">
         Tra Sogni e Progetti: Le Mie Storie
       </h1>

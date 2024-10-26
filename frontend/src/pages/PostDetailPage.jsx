@@ -44,7 +44,7 @@ export default function PostDetailPage() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-10 font-cormorant-sc text-xl">
+    <div className=" pt-14 max-w-2xl mx-auto mt-10 font-cormorant-sc text-xl pt-14">
       <h1 className="text-3xl font-bold mb-4 text-center p-4">{post.title}</h1>
 
       {/* Carosello di immagini */}

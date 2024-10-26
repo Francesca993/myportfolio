@@ -3,7 +3,7 @@ import "../index.css";
 
 export default function Portfolio() {
   return (
-    <div className="font-cormorant-sc min-h-screen bg-gradient-to-r from-purple-100 via-lilac-50 to-pink-100 flex flex-col items-center justify-start px-4">
+    <div className="pt-14 font-cormorant-sc min-h-screen bg-gradient-to-r from-purple-100 via-lilac-50 to-lilac-100 flex flex-col items-center justify-start px-4">
       {/* Titolo */}
       <h1 className="text-5xl font-bold font-cormorant-sc text-black mb-8 mt-6 pt-2">
         Scopri il Mio Mondo Digitale
@@ -24,6 +24,10 @@ export default function Portfolio() {
             <br /> e scopri la mia formazione su Epicode 🎓.
             <br /> Che tu sia alla ricerca di collaborazioni o ispirazione, sei
             nel posto giusto! 🌍
+            <br />
+            <br />
+            ✉️ Scrivimi ➤ montinifrancesca993@gmail.com <br />
+            📞 Contattami ➤ +39 3894767812
           </p>
         </div>
 

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant+SC:wght@300;400;500;600;700&family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant+SC:wght@300;400;500;600;700&family=Cormorant+Unicase:wght@300;400;500;600;700&family=Whisper&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -19,6 +19,9 @@
   }
   .bg-lilac-tr {
     background-color: #fcfcfc5e; /* Lilla chiaro */
+  }
+  .bg-rosa-50 {
+    background-color: #f0e1d9;
   }
 }
 

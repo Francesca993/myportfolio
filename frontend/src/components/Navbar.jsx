@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar({ isAuthenticated, setIsAuthenticated }) {
@@ -10,26 +10,16 @@ export default function Navbar({ isAuthenticated, setIsAuthenticated }) {
   };
 
   const handleLogout = () => {
-    // Rimuovi il token JWT
     localStorage.removeItem("token");
     setIsAuthenticated(false);
-    navigate("/"); // Ritorna alla homepage
+    navigate("/"); // Redirect to homepage
   };
 
   return (
-    <nav className="font-cormorant-unicase font-bold bg-pink-50 shadow-md fixed w-full top-0 left-0 z-50">
+    <nav className="font-cormorant-unicase font-bold backdrop-blur-md fixed w-full top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          {/* Logo a sinistra */}
-          <div className="flex-shrink-0 flex items-center">
-            <img
-              className="h-16 w-auto"
-              src="./src/assets/logo.png" // Inserisci qui il logo
-              alt="Logo"
-            />
-          </div>
-
-          {/* Hamburger Menu per dispositivi mobili */}
+          {/* Toggle Menu for Mobile */}
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
@@ -64,8 +54,8 @@ export default function Navbar({ isAuthenticated, setIsAuthenticated }) {
             </button>
           </div>
 
-          {/* Link di navigazione per dispositivi più grandi */}
-          <div className="hidden md:flex space-x-8 items-center">
+          {/* Navigation Links for Larger Screens */}
+          <div className="hidden md:flex flex-grow justify-evenly items-center space-x-4">
             <Link to="/" className="text-black-800 hover:text-pink-600 text-lg">
               Home
             </Link>
@@ -88,37 +78,28 @@ export default function Navbar({ isAuthenticated, setIsAuthenticated }) {
               Blog
             </Link>
 
-            {/* Mostra "Create Post" solo se autenticato */}
+            {/* Show "Create Post" and "Logout" if authenticated */}
             {isAuthenticated && (
-              <Link
-                to="/create-post"
-                className="text-black-800 hover:text-pink-600 text-lg"
-              >
-                Create Post
-              </Link>
-            )}
-
-            {/* Mostra "Logout" se autenticato, altrimenti "Login" */}
-            {isAuthenticated ? (
-              <button
-                onClick={handleLogout}
-                className="text-black-800 hover:text-pink-600 text-lg"
-              >
-                Logout
-              </button>
-            ) : (
-              <Link
-                to="/login"
-                className="text-black-800 hover:text-pink-600 text-lg"
-              >
-                Login
-              </Link>
+              <>
+                <Link
+                  to="/create-post"
+                  className="text-black-800 hover:text-pink-600 text-lg"
+                >
+                  Create Post
+                </Link>
+                <button
+                  onClick={handleLogout}
+                  className="text-black-800 hover:text-pink-600 text-lg"
+                >
+                  Logout
+                </button>
+              </>
             )}
           </div>
         </div>
       </div>
 
-      {/* Link di navigazione per dispositivi mobili */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -151,33 +132,23 @@ export default function Navbar({ isAuthenticated, setIsAuthenticated }) {
               Blog
             </Link>
 
-            {/* Mostra "Create Post" solo se autenticato */}
+            {/* Show "Create Post" and "Logout" if authenticated */}
             {isAuthenticated && (
-              <Link
-                to="/create-post"
-                className="block text-black-800 hover:text-pink-600 text-lg"
-                onClick={() => setIsOpen(false)}
-              >
-                Create Post
-              </Link>
-            )}
-
-            {/* Mostra "Logout" se autenticato, altrimenti "Login" */}
-            {isAuthenticated ? (
-              <button
-                onClick={handleLogout}
-                className="block text-black-800 hover:text-pink-600 text-lg"
-              >
-                Logout
-              </button>
-            ) : (
-              <Link
-                to="/login"
-                className="block text-black-800 hover:text-pink-600 text-lg"
-                onClick={() => setIsOpen(false)}
-              >
-                Login
-              </Link>
+              <>
+                <Link
+                  to="/create-post"
+                  className="block text-black-800 hover:text-pink-600 text-lg"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Create Post
+                </Link>
+                <button
+                  onClick={handleLogout}
+                  className="block text-black-800 hover:text-pink-600 text-lg"
+                >
+                  Logout
+                </button>
+              </>
             )}
           </div>
         </div>

@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 import CreatePostPage from "./pages/CreatePostPage";
 import BlogPage from "./pages/BlogPage";
 import PostDetailPage from "./pages/PostDetailPage";
-import About from "./pages/About";
+import About from "./pages/About/About";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -27,7 +27,6 @@ function App() {
         isAuthenticated={isAuthenticated}
         setIsAuthenticated={setIsAuthenticated}
       />
-      <div className="pt-14"></div>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/portfolio" element={<Portfolio />} />

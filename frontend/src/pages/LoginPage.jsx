@@ -29,7 +29,7 @@ export default function LoginPage({ setIsAuthenticated }) {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10">
+    <div className="max-w-md mx-auto mt-10 pt-14">
       <h1 className="text-2xl font-bold mb-6">Login</h1>
       {error && <p className="text-red-500">{error}</p>}
       <form onSubmit={handleSubmit} className="space-y-4">
