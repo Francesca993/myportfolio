@@ -33,75 +33,75 @@ Benvenuti nel repository del mio sito portfolio! 🚀 Questo progetto è stato c
 
 ## 🗂️ Struttura delle Cartelle
 
-📁 my-portfolio-website
-├── backend
-│ ├── 📁 controllers # Logica dei controller per autenticazione e gestione dei post
-│ │ ├── authController.js
-│ │ └── postControllers.js
-│ ├── 📁 middlewares # Middleware per autenticazione e sicurezza
-│ │ └── authMiddleware.js
-│ ├── 📁 model # Modelli per MongoDB
-│ │ ├── Post.js
-│ │ └── User.js
-│ ├── 📁 routes # Definizione delle rotte per autenticazione e blog
-│ │ ├── authRoutes.js
-│ │ ├── blogPostRoutes.js
-│ │ └── postRoutes.js
-│ ├── 📁 uploads # Cartella per caricamenti dei file
-│ ├── .env # Variabili di ambiente
-│ ├── .gitignore # File e cartelle da ignorare in Git
-│ ├── createAdminUser.js # Script per creare l'utente Admin
-│ ├── package-lock.json
-│ ├── package.json # Dipendenze del backend
+📁 my-portfolio-website  
+├── backend  
+│ ├── 📁 controllers # Logica dei controller per autenticazione e gestione dei post  
+│ │ ├── authController.js  
+│ │ └── postControllers.js  
+│ ├── 📁 middlewares # Middleware per autenticazione e sicurezza  
+│ │ └── authMiddleware.js  
+│ ├── 📁 model # Modelli per MongoDB  
+│ │ ├── Post.js  
+│ │ └── User.js  
+│ ├── 📁 routes # Definizione delle rotte per autenticazione e blog  
+│ │ ├── authRoutes.js  
+│ │ ├── blogPostRoutes.js  
+│ │ └── postRoutes.js  
+│ ├── 📁 uploads # Cartella per caricamenti dei file  
+│ ├── .env # Variabili di ambiente  
+│ ├── .gitignore # File e cartelle da ignorare in Git  
+│ ├── createAdminUser.js # Script per creare l'utente Admin  
+│ ├── package-lock.json  
+│ ├── package.json # Dipendenze del backend  
 │ └── server.js # File principale del server
 
-├── frontend
-│ ├── 📁 src # Codice sorgente del frontend
-│ │ ├── 📁 assets # Risorse statiche (immagini, icone, ecc.)
-│ │ │ ├── 📁 cv
-│ │ │ │ ├── 1.png
-│ │ │ │ ├── 2.png
-│ │ │ │ ├── C.png
-│ │ │ │ ├── css.png
-│ │ │ │ ├── express.png
-│ │ │ │ ├── html.png
-│ │ │ │ ├── js.png
-│ │ │ │ ├── mongo.png
-│ │ │ │ ├── node.png
-│ │ │ │ ├── react.png
-│ │ │ │ └── tailwind.png
-│ │ │ ├── epicode.png
-│ │ │ ├── homeislanda.jpg
-│ │ │ ├── IMG_camper.jpg
-│ │ │ └── logo.png
-│ │ ├── 📁 components # Componenti riutilizzabili di React
-│ │ │ ├── Footer.jsx
-│ │ │ └── Navbar.jsx
-│ │ ├── 📁 pages # Pagine principali dell'app
-│ │ │ ├── 📁 About
-│ │ │ │ ├── About.jsx
-│ │ │ │ ├── Education.jsx
-│ │ │ │ ├── JumbotronAbout.jsx
-│ │ │ │ ├── ResumeSection.jsx
-│ │ │ │ └── Skills.jsx
-│ │ │ ├── BlogPage.jsx
-│ │ │ ├── CreatePostPage.jsx
-│ │ │ ├── Homepage.jsx
-│ │ │ ├── LoginPage.jsx
-│ │ │ ├── Portfolio.jsx
-│ │ │ └── PostDetailPage.jsx
-│ │ ├── App.css
-│ │ ├── App.jsx
-│ │ ├── index.css
+├── frontend  
+│ ├── 📁 src # Codice sorgente del frontend  
+│ │ ├── 📁 assets # Risorse statiche (immagini, icone, ecc.)  
+│ │ │ ├── 📁 cv  
+│ │ │ │ ├── 1.png  
+│ │ │ │ ├── 2.png  
+│ │ │ │ ├── C.png  
+│ │ │ │ ├── css.png  
+│ │ │ │ ├── express.png  
+│ │ │ │ ├── html.png  
+│ │ │ │ ├── js.png  
+│ │ │ │ ├── mongo.png  
+│ │ │ │ ├── node.png  
+│ │ │ │ ├── react.png  
+│ │ │ │ └── tailwind.png  
+│ │ │ ├── epicode.png  
+│ │ │ ├── homeislanda.jpg  
+│ │ │ ├── IMG_camper.jpg  
+│ │ │ └── logo.png  
+│ │ ├── 📁 components # Componenti riutilizzabili di React  
+│ │ │ ├── Footer.jsx  
+│ │ │ └── Navbar.jsx  
+│ │ ├── 📁 pages # Pagine principali dell'app  
+│ │ │ ├── 📁 About  
+│ │ │ │ ├── About.jsx  
+│ │ │ │ ├── Education.jsx  
+│ │ │ │ ├── JumbotronAbout.jsx  
+│ │ │ │ ├── ResumeSection.jsx  
+│ │ │ │ └── Skills.jsx  
+│ │ │ ├── BlogPage.jsx  
+│ │ │ ├── CreatePostPage.jsx  
+│ │ │ ├── Homepage.jsx  
+│ │ │ ├── LoginPage.jsx  
+│ │ │ ├── Portfolio.jsx  
+│ │ │ └── PostDetailPage.jsx  
+│ │ ├── App.css  
+│ │ ├── App.jsx  
+│ │ ├── index.css  
 │ │ └── main.jsx  
-│ ├── .gitignore
-│ ├── eslint.config.js
-│ ├── index.html
-│ ├── package-lock.json
-│ ├── package.json
-│ ├── postcss.config.js
-│ ├── README.md
-│ ├── tailwind.config.js
+│ ├── .gitignore  
+│ ├── eslint.config.js  
+│ ├── index.html  
+│ ├── package-lock.json  
+│ ├── package.json  
+│ ├── postcss.config.js  
+│ ├── README.md  
+│ ├── tailwind.config.js  
 │ └── vite.config.js
 
 ## 🚀 Deploy
