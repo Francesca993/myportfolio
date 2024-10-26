@@ -3,7 +3,7 @@ import "../index.css"; // Tailwind styles are imported here
 
 export default function Homepage() {
   return (
-    <div className="home">
+    <div className="home pt-8">
       <div className="font-cormorant-sc min-h-screen bg-lilac-tr flex flex-col items-center justify-center mt-4">
         <h2 className="text-4xl font-bold text-gray-800 p-4">Hey, I'm</h2>
         <div className="mb-6">

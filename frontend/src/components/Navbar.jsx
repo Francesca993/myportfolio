@@ -55,7 +55,7 @@ export default function Navbar({ isAuthenticated, setIsAuthenticated }) {
           </div>
 
           {/* Navigation Links for Larger Screens */}
-          <div className="hidden md:flex flex-grow justify-evenly items-center space-x-4">
+          <div className="hidden md:flex flex-grow justify-evenly items-center space-x-4 pt-1">
             <Link to="/" className="text-black-800 hover:text-pink-600 text-lg">
               Home
             </Link>

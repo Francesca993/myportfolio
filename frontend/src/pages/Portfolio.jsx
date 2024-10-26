@@ -3,7 +3,7 @@ import "../index.css";
 
 export default function Portfolio() {
   return (
-    <div className="pt-14 font-cormorant-sc min-h-screen bg-gradient-to-r from-purple-100 via-lilac-50 to-lilac-100 flex flex-col items-center justify-start px-4">
+    <div className="bg-pink-50 pt-14 font-cormorant-sc min-h-screen flex flex-col items-center justify-start px-4">
       {/* Titolo */}
       <h1 className="text-5xl font-bold font-cormorant-sc text-black mb-8 mt-6 pt-2">
         Scopri il Mio Mondo Digitale
@@ -38,7 +38,7 @@ export default function Portfolio() {
             href="https://github.com/Francesca993/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-beige-100 shadow-lg w-52 h-32 p-4 flex flex-col items-center justify-center hover:bg-pink-50 transform hover:-translate-y-2 hover:scale-105 transition duration-500 ease-in-out"
+            className="bg-beige-100 shadow-lg w-52 h-32 p-4 flex flex-col items-center justify-center transform hover:-translate-y-2 hover:scale-105 transition duration-500 ease-in-out"
           >
             <img
               src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
@@ -53,7 +53,7 @@ export default function Portfolio() {
             href="https://www.linkedin.com/in/francesca-montini-19b90929a/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-beige-100 shadow-lg w-52 h-32 p-4 flex flex-col items-center justify-center hover:bg-pink-50 transform hover:-translate-y-2 hover:scale-105 transition duration-500 ease-in-out"
+            className="bg-beige-100 shadow-lg w-52 h-32 p-4 flex flex-col items-center justify-center transform hover:-translate-y-2 hover:scale-105 transition duration-500 ease-in-out"
           >
             <img
               src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
@@ -68,7 +68,7 @@ export default function Portfolio() {
             href="https://talent.epicode.com/talent/e0fdbcf6-2914-4383-8558-62666a53b481"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-beige-100 shadow-lg w-52 h-32 p-4 flex flex-col items-center justify-center hover:bg-pink-50 transform hover:-translate-y-2 hover:scale-105 transition duration-500 ease-in-out"
+            className="bg-beige-100 shadow-lg w-52 h-32 p-4 flex flex-col items-center justify-center transform hover:-translate-y-2 hover:scale-105 transition duration-500 ease-in-out"
           >
             <img
               src="./src/assets/epicode.png"

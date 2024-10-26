@@ -1,5 +1,6 @@
 // src/components/ResumeSection.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ResumeSection = () => {
   return (
@@ -11,14 +12,14 @@ const ResumeSection = () => {
           Trovi i miei contatti qui!
         </h2>
         <div className="flex justify-center mb-6 mt-4">
-          <a
-            href="https://tuo-portfolio.com" // Sostituisci con il link del tuo portfolio
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-pink-500 hover:bg-pink-700 text-white font-semibold py-3 px-6 text-lg rounded shadow-md transform transition duration-300 hover:scale-105"
-          >
-            Visita il mio Portfolio
-          </a>
+          <div className="flex justify-center mb-6 mt-4">
+            <Link
+              to="/portfolio"
+              className="bg-pink-500 hover:bg-pink-700 text-white font-semibold py-3 px-6 text-lg rounded shadow-md transform transition duration-300 hover:scale-105"
+            >
+              Visita il mio Portfolio
+            </Link>
+          </div>
         </div>
 
         {/* Interessi Personali */}

@@ -44,42 +44,46 @@ export default function PostDetailPage() {
   };
 
   return (
-    <div className=" pt-14 max-w-2xl mx-auto mt-10 font-cormorant-sc text-xl pt-14">
-      <h1 className="text-3xl font-bold mb-4 text-center p-4">{post.title}</h1>
+    <div className="bg-pink-50 pt-14 ">
+      <div className=" max-w-2xl mx-auto mt-6 font-cormorant-sc text-xl">
+        <h1 className="text-3xl font-bold mb-4 text-center p-4">
+          {post.title}
+        </h1>
 
-      {/* Carosello di immagini */}
-      {post.images && post.images.length > 0 && (
-        <div className="relative">
-          <img
-            src={`http://localhost:4505/${post.images[currentImageIndex]}`}
-            alt={`Immagine ${currentImageIndex + 1}`}
-            className="w-full h-auto mb-4 max-h-96 object-cover"
-          />
+        {/* Carosello di immagini */}
+        {post.images && post.images.length > 0 && (
+          <div className="relative">
+            <img
+              src={`http://localhost:4505/${post.images[currentImageIndex]}`}
+              alt={`Immagine ${currentImageIndex + 1}`}
+              className="w-full h-auto mb-4 max-h-96 object-cover"
+            />
 
-          {/* Pulsante per andare all'immagine precedente */}
-          <button
-            onClick={handlePrevious}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-800 text-white hover:bg-gray-600"
-          >
-            &#8249;
-          </button>
+            {/* Pulsante per andare all'immagine precedente */}
+            <button
+              onClick={handlePrevious}
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-white hover:bg-gray-600"
+            >
+              &#8249;
+            </button>
 
-          {/* Pulsante per andare all'immagine successiva */}
-          <button
-            onClick={handleNext}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-800 text-white hover:bg-gray-600"
-          >
-            &#8250;
-          </button>
-        </div>
-      )}
+            {/* Pulsante per andare all'immagine successiva */}
+            <button
+              onClick={handleNext}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-white hover:bg-gray-600"
+            >
+              &#8250;
+            </button>
+          </div>
+        )}
 
-      <p className="text-xl leading-relaxed text-black-600 mb-4">
-        {post.content}
-      </p>
-      <p className="text-black-600 mb-4 text-bold">
-        {new Date(post.createdAt).toLocaleDateString()}
-      </p>
+        <p className="text-xl leading-relaxed text-black-600 mb-4">
+          {post.content}
+        </p>
+        <p className="text-black-600 pb-4 text-bold">
+          {new Date(post.createdAt).toLocaleDateString()}
+        </p>
+      </div>
     </div>
   );
 }

@@ -41,48 +41,50 @@ export default function BlogPage() {
   };
 
   return (
-    <div className="font-cormorant-sc min-h-screen max-w-7xl mx-auto pt-14 px-4 sm:px-6 lg:px-8 mt-10">
-      <h1 className="text-3xl font-bold mb-6 text-center">
-        Tra Sogni e Progetti: Le Mie Storie
-      </h1>
+    <div className="bg-pink-50  pt-14">
+      <div className="bg-pink-50 font-cormorant-sc min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+        <h1 className="text-3xl font-bold mb-6 text-center">
+          Tra Sogni e Progetti: Le Mie Storie
+        </h1>
 
-      {error && <p className="text-red-500 text-center">{error}</p>}
+        {error && <p className="text-red-500 text-center">{error}</p>}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {posts.map((post) => (
-          <div
-            key={post._id}
-            className="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
-          >
-            <Link to={`/posts/${post._id}`}>
-              {post.images && post.images.length > 0 && (
-                <img
-                  src={`http://localhost:4505/${post.images[0]}`}
-                  alt={post.title}
-                  className="h-48 w-full object-cover"
-                />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {posts.map((post) => (
+            <div
+              key={post._id}
+              className="bg-white shadow-pink-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
+            >
+              <Link to={`/posts/${post._id}`}>
+                {post.images && post.images.length > 0 && (
+                  <img
+                    src={`http://localhost:4505/${post.images[0]}`}
+                    alt={post.title}
+                    className="h-48 w-full object-cover"
+                  />
+                )}
+                <div className="p-4">
+                  <h2 className="text-xl font-semibold">{post.title}</h2>
+                  <p className="text-gray-600">
+                    {new Date(post.createdAt).toLocaleDateString()}
+                  </p>
+                </div>
+              </Link>
+
+              {/* Mostra il pulsante di cancellazione solo se l'utente è autenticato */}
+              {isAuthenticated && (
+                <div className="p-4 flex justify-end">
+                  <button
+                    onClick={() => handleDelete(post._id)}
+                    className="text-red-500 hover:text-red-700"
+                  >
+                    Cancella
+                  </button>
+                </div>
               )}
-              <div className="p-4">
-                <h2 className="text-xl font-semibold">{post.title}</h2>
-                <p className="text-gray-600">
-                  {new Date(post.createdAt).toLocaleDateString()}
-                </p>
-              </div>
-            </Link>
-
-            {/* Mostra il pulsante di cancellazione solo se l'utente è autenticato */}
-            {isAuthenticated && (
-              <div className="p-4 flex justify-end">
-                <button
-                  onClick={() => handleDelete(post._id)}
-                  className="text-red-500 hover:text-red-700"
-                >
-                  Cancella
-                </button>
-              </div>
-            )}
-          </div>
-        ))}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
