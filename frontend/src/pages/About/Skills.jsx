@@ -1,16 +1,28 @@
 // src/components/Skills.jsx
 import React from "react";
 
+// Importa le immagini
+import htmlIcon from "../../assets/cv/html.png";
+import cssIcon from "../../assets/cv/css.png";
+import jsIcon from "../../assets/cv/js.png";
+import reactIcon from "../../assets/cv/react.png";
+import nodeIcon from "../../assets/cv/node.png";
+import expressIcon from "../../assets/cv/express.png";
+import mongoIcon from "../../assets/cv/mongo.png";
+import cIcon from "../../assets/cv/c.png";
+import tailwindIcon from "../../assets/cv/tailwind.png";
+
+// Array di oggetti con nome e icona
 const skills = [
-  { name: "HTML", icon: "./src/assets/cv/html.png" },
-  { name: "CSS", icon: "./src/assets/cv/css.png" },
-  { name: "JavaScript", icon: "./src/assets/cv/js.png" },
-  { name: "React", icon: "/./src/assets/cv/react.png" },
-  { name: "Node.js", icon: "./src/assets/cv/node.png" },
-  { name: "Express", icon: "./src/assets/cv/express.png" },
-  { name: "MongoDB", icon: "./src/assets/cv/mongo.png" },
-  { name: "C", icon: "./src/assets/cv/c.png" },
-  { name: "Tailwind", icon: "./src/assets/cv/tailwind.png" },
+  { name: "HTML", icon: htmlIcon },
+  { name: "CSS", icon: cssIcon },
+  { name: "JavaScript", icon: jsIcon },
+  { name: "React", icon: reactIcon },
+  { name: "Node.js", icon: nodeIcon },
+  { name: "Express", icon: expressIcon },
+  { name: "MongoDB", icon: mongoIcon },
+  { name: "C", icon: cIcon },
+  { name: "Tailwind", icon: tailwindIcon },
 ];
 
 const Skills = () => {

@@ -1,5 +1,6 @@
 import React from "react";
 import "../index.css";
+import epicodeimg from "../assets/epicode.png";
 
 export default function Portfolio() {
   return (
@@ -70,11 +71,7 @@ export default function Portfolio() {
             rel="noopener noreferrer"
             className="bg-beige-100 shadow-lg w-52 h-32 p-4 flex flex-col items-center justify-center transform hover:-translate-y-2 hover:scale-105 transition duration-500 ease-in-out"
           >
-            <img
-              src="./src/assets/epicode.png"
-              alt="Epicode"
-              className="w-16 h-16 mb-2"
-            />
+            <img src={epicodeimg} alt="Epicode" className="w-16 h-16 mb-2" />
             <p className="text-lg font-semibold text-black">Epicode</p>
           </a>
         </div>

@@ -9,6 +9,7 @@ export default function CreatePostPage() {
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const navigate = useNavigate();
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,7 +33,7 @@ export default function CreatePostPage() {
 
       // Invia la richiesta al backend
       const { data } = await axios.post(
-        "http://localhost:4505/api/posts",
+        `http://${API_URL}4505/api/posts`,
         formData,
         {
           headers: {

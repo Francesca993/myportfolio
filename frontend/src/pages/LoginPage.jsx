@@ -7,11 +7,12 @@ export default function LoginPage({ setIsAuthenticated }) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:4505/api/login", {
+      const { data } = await axios.post(`${API_URL}/api/login`, {
         username,
         password,
       });

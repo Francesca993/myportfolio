@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function BlogPage() {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState("");
   const isAuthenticated = !!localStorage.getItem("token");
@@ -11,7 +12,7 @@ export default function BlogPage() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const { data } = await axios.get("http://localhost:4505/api/posts");
+        const { data } = await axios.get(`${API_URL}/api/posts`);
         setPosts(data);
       } catch (error) {
         setError("Errore nel caricamento dei post");
@@ -29,7 +30,7 @@ export default function BlogPage() {
     }
 
     try {
-      await axios.delete(`http://localhost:4505/api/posts/${postId}`, {
+      await axios.delete(`${API_URL}/api/posts/${postId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -58,7 +59,7 @@ export default function BlogPage() {
               <Link to={`/posts/${post._id}`}>
                 {post.images && post.images.length > 0 && (
                   <img
-                    src={`http://localhost:4505/${post.images[0]}`}
+                    src={`${API_URL}/${post.images[0]}`}
                     alt={post.title}
                     className="h-48 w-full object-cover"
                   />

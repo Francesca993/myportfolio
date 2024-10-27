@@ -1,4 +1,5 @@
 import React from "react";
+import fotoprofilo from "../../assets/cv/1.png";
 
 export default function JumbotronAbout() {
   return (
@@ -35,7 +36,7 @@ export default function JumbotronAbout() {
         {/* Modulo 2: Foto */}
         <div className="flex-shrink-0 mt-6 md:mt-0 md:ml-6 flex justify-center items-center">
           <img
-            src="./src/assets/cv/1.png" // Inserisci il link alla tua immagine
+            src={fotoprofilo} // Inserisci il link alla tua immagine
             alt="Foto profilo"
             className="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 lg:w-96 lg:h-96 object-cover"
           />

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+const API_URL = import.meta.env.VITE_API_URL;
 
 export default function PostDetailPage() {
   const { id } = useParams();
@@ -11,9 +12,7 @@ export default function PostDetailPage() {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const { data } = await axios.get(
-          `http://localhost:4505/api/posts/${id}`
-        );
+        const { data } = await axios.get(`http://${API_URL}/api/posts/${id}`);
         setPost(data);
       } catch (error) {
         setError("Errore nel caricamento del post");
@@ -54,7 +53,7 @@ export default function PostDetailPage() {
         {post.images && post.images.length > 0 && (
           <div className="relative">
             <img
-              src={`http://localhost:4505/${post.images[currentImageIndex]}`}
+              src={`http://${API_URL}/${post.images[currentImageIndex]}`}
               alt={`Immagine ${currentImageIndex + 1}`}
               className="w-full h-auto mb-4 max-h-96 object-cover"
             />
