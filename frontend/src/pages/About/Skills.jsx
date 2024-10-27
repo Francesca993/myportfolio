@@ -9,7 +9,7 @@ import reactIcon from "../../assets/cv/react.png";
 import nodeIcon from "../../assets/cv/node.png";
 import expressIcon from "../../assets/cv/express.png";
 import mongoIcon from "../../assets/cv/mongo.png";
-import cIcon from "../../assets/cv/c.png";
+import cIcon from "../../assets/cv/C.png";
 import tailwindIcon from "../../assets/cv/tailwind.png";
 
 // Array di oggetti con nome e icona
